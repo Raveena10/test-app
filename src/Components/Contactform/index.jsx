@@ -21,35 +21,39 @@ function ContactForm() {
     }
   return (
     <>
-    <div className="containezr">
-    <div className="col-auto">
-    <label htmlFor="inputPassword6" className="col-form-label">
-        Email
-      </label>
-      <input
-        type="E-mail"
-        id="email"
-        className="form-control"
-        aria-describedby="passwordHelpInline"
-        onChange={(e) => setEmail(e.target.value)}
-      />
+    <div className="container-fluid">
+      <h1 className="text-center text-dark py-3 display-2" style={{ fontSize: 40, fontWeight: "bold" }}>Contact Form</h1>
+      <div className="row">
+        <div className="col-md-6 p-5 mx-auto shadow">
+          <form >
+            <div className="form-group">
+              <input
+                className="form-control my-2"
+                type="email"
+                placeholder="Email"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Phone"
+              />
+            </div>
+            <div className="form-group my-3">
+              <button
+                type="submit"
+                onClick={submitHandler}
+                className="btn btn-block btn-dark"
+              >Add Contact
+              </button>
+            </div>
 
-    </div>
-    <div className="col-auto">
-      <label htmlFor="inputPassword6" className="col-form-label">
-        Mobile number
-      </label>
-      <input
-        type="number"
-        id="number"
-        className="form-control"
-        aria-describedby="passwordHelpInline"
-        onChange={(e) => setNumber(e.target.value)}
-      />
-    </div>
-    <br></br>
-    <button className="btn btn-primary" type="submit"
-     onClick={submitHandler}>Submit</button>
+          </form>
+
+        </div>
+      </div>
+
     </div>
   </>
   );
